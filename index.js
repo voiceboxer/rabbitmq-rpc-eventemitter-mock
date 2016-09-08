@@ -73,7 +73,7 @@ Queue.prototype.pull = function(pattern, listener, callback) {
     if(!options.replyTo || !options.correlationId) return;
 
     var onresponse = function(err, data) {
-      data = serializeError(err) || data;
+      data = serializeError(err) || data || {};
 
       self._queue.push(options.replyTo, data, {
         correlationId: options.correlationId

@@ -99,6 +99,22 @@ test('queue push without data', function(t) {
   });
 });
 
+test('queue push without response data', function(t) {
+  var queue = createQueue();
+
+  t.plan(3);
+
+  queue.connection.pull('test-pattern', function(message, callback) {
+    t.deepEquals(message, { ok: 1 });
+    callback();
+  });
+
+  queue.push('test-pattern', { ok: 1 }, function(err, message) {
+    t.error(err);
+    t.deepEquals(message, {});
+  });
+});
+
 test('queue push with error', function(t) {
   var queue = createQueue();
 
@@ -205,6 +221,22 @@ test('queue pull without data', function(t) {
   queue.connection.push('test-pattern', function(err, message) {
     t.error(err);
     t.deepEquals(message, { ok: 1 });
+  });
+});
+
+test('queue pull without response data', function(t) {
+  var queue = createQueue();
+
+  t.plan(3);
+
+  queue.pull('test-pattern', function(message, callback) {
+    t.deepEquals(message, { ok: 1 });
+    callback();
+  });
+
+  queue.connection.push('test-pattern', { ok: 1 }, function(err, message) {
+    t.error(err);
+    t.deepEquals(message, {});
   });
 });
 
