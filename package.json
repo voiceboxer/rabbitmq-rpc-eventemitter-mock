@@ -1,0 +1,30 @@
+{
+  "name": "rabbitmq-rpc-eventemitter-mock",
+  "version": "1.0.0",
+  "description": "Mock for rabbitmq-rpc-eventemitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voiceboxer/rabbitmq-rpc-eventemitter-mock.git"
+  },
+  "keywords": [
+    "rabbitmq",
+    "event",
+    "emitter",
+    "rpc",
+    "mock"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/voiceboxer/rabbitmq-rpc-eventemitter-mock/issues"
+  },
+  "homepage": "https://github.com/voiceboxer/rabbitmq-rpc-eventemitter-mock#readme",
+  "devDependencies": {
+    "deep-equal": "^1.0.1",
+    "rabbitmq-eventemitter-mock": "^1.1.0",
+    "tape": "^4.6.0"
+  }
+}
