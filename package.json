@@ -24,7 +24,7 @@
   "homepage": "https://github.com/voiceboxer/rabbitmq-rpc-eventemitter-mock#readme",
   "devDependencies": {
     "deep-equal": "^1.0.1",
-    "rabbitmq-eventemitter-mock": "^1.1.0",
+    "rabbitmq-eventemitter-mock": "^1.2.0",
     "tape": "^4.6.0"
   }
 }
