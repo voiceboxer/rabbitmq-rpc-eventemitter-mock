@@ -1,6 +1,6 @@
 {
   "name": "rabbitmq-rpc-eventemitter-mock",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Mock for rabbitmq-rpc-eventemitter",
   "main": "index.js",
   "scripts": {
